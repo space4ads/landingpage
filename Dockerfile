@@ -10,17 +10,17 @@ ENV PRODUCTION_API_TOKEN=$PRODUCTION_API_TOKEN
 ENV PATH /app/node_modules/.bin:$PATH
 RUN echo $BACKEND_URL
 WORKDIR /app
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 
 FROM base AS prod-deps
-RUN yarn install --production
+RUN npm install --production
 
 FROM base AS build-deps
-RUN yarn install --production=false
+RUN npm install --production=false
 
 FROM build-deps AS build
 COPY . .
-RUN yarn build
+RUN npm build
 
 FROM base AS runtime
 COPY --from=prod-deps /app/node_modules ./node_modules
