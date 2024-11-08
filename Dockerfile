@@ -20,7 +20,7 @@ RUN npm install --production=false
 
 FROM build-deps AS build
 COPY . .
-RUN npm build
+RUN npm run build
 
 FROM base AS runtime
 COPY --from=prod-deps /app/node_modules ./node_modules
