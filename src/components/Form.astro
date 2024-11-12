@@ -6,28 +6,35 @@ if (Astro.request.method === "POST") {
 	    const data = await Astro.request.formData();
 		await saveFormData(data);
 	} catch (error) {
-			if (error instanceof Error) {
-				console.error(error.message);
-			}
+		if (error instanceof Error) {
+			console.error(error.message);
 		}
 	}
+}
 ---
 
 <div class="card">
-	<form class="my-form" method="POST">
+	<form class="my-form" id="myform">
 		<div class="container">
-			<h1>Get in touch!</h1>
-			<ul>
+				<ul>
 				<li>
-					<div class="grid grid-2">
-						<input type="text" name="name" placeholder="Name" required>
-						<input type="text" name="surname" placeholder="Surname" required>
+					<div class="grid grid">
+						<input type="text" name="Name" placeholder="Name" required>
 					</div>
 				</li>
 				<li>
-					<div class="grid grid-2">
-						<input type="email" name="email" placeholder="Email" required>
-						<input type="tel" name="phone" placeholder="Phone">
+					<div class="grid grid">
+						<input type="email" name="Email" placeholder="Email" required>
+					</div>
+				</li>
+					<li>
+						<div class="grid grid-2">
+							<input type="tel" name="Phone" placeholder="Phone">
+						</div>
+					</li>
+				<li>
+					<div class="grid grid">
+						<textarea name="Message" placeholder="Message"></textarea>
 					</div>
 				</li>
 				<li>
@@ -35,7 +42,6 @@ if (Astro.request.method === "POST") {
 						<button type="submit">
 							<span class="btn-conversion">Submit</span>
 						</button>
-
 					</div>
 				</li>
 			</ul>
@@ -148,7 +154,7 @@ if (Astro.request.method === "POST") {
 	}
 
 	.my-form ::placeholder {
-		color: inherit;
+		color: white;
 		/*Fix opacity issue on Firefox*/
 		opacity: 1;
 	}
