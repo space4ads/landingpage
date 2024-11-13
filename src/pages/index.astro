@@ -3,15 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Form from '../components/Form/Form';
 ---
 
-<Layout title="Space4Ads - Monetize your empty real estate">
+<Layout title="Space4Ads - Turn Empty Space Into Ads">
     <main>
         <center><img src="/Space4Ads.png" width="250px"></center>
-        <p>We Turn Window Space Into Ads</p>
+        <p>Turn Empty Space Into Ads</p>
 
         <p>Revenues for Vacant Spaces</p>
 
         <p>Street-Level Ads for Brands</p>
         <Form client:only="react" />
+        <p><a href="https://www.instagram.com/space4ads_app"><img src="/icons8-instagram-240.png" width="48px" /></a>&nbsp
+        <a href="https://www.linkedin.com/company/space4ads"><img src="/icons8-linkedin-240.png" width="48px" /></a></p>
+        <span style="font-size: smaller">©️2024 Space4Ads - <a href="mailto:try.space4ads@gmail.com">try.space4ads@gmail.com</a></span>
     </main>
 </Layout>
 
@@ -26,5 +29,8 @@ import Form from '../components/Form/Form';
         line-height: 1.6;
         text-align: center;
         font-family: "Open Sans", sans-serif;;
+    }
+    p {
+        font-weight: bold;
     }
 </style>
