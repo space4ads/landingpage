@@ -7,6 +7,6 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://space4ads.github.io',
   base: '/',
-  output: 'server',
+  output: 'static',
   integrations: [react()]
 });
