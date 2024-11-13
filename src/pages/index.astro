@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Form from '../components/Form.astro';
+import Form from '../components/Form/Form';
 ---
 
 <Layout title="Space4Ads - Monetize your empty real estate">
@@ -37,11 +37,12 @@ import Form from '../components/Form.astro';
 			Elevate your brand and engage with your local audience. Contact us today to discover available storefronts and start making an impact!
 		</span>
 		<br><br>
-        <Form/>
+        <Form client:only="react" />
     </main>
 </Layout>
 
 <style>
+
     main {
         margin: auto;
         padding: 1rem;
