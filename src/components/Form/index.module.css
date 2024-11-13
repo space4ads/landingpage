@@ -1,16 +1,16 @@
 :root {
-    --white: #afafaf;
+    --white: #333;
     --red: #e31b23;
-    --bodyColor: #292a2b;
-    --borderFormEls: hsl(0, 0%, 10%);
-    --bgFormEls: hsl(0, 0%, 14%);
-    --bgFormElsFocus: hsl(0, 7%, 20%);
+    --bodyColor: #fff;
+    --borderFormEls: #333;
+    --bgFormEls: #fff;
+    --bgFormElsFocus: #fff;
 }
+
 .card {
     list-style: none;
     display: flex;
     padding: 1px;
-    background-color: #23262d;
     border-radius: 7px;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
@@ -27,6 +27,7 @@ textarea,
 button {
     font-family: inherit;
     font-size: 100%;
+    border: 1px solid black;
 }
 
 button,
@@ -83,7 +84,7 @@ ul {
 }
 
 .my-form ::placeholder {
-    color: white;
+    color: #999;
     /*Fix opacity issue on Firefox*/
     opacity: 1;
 }

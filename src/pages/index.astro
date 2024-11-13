@@ -5,38 +5,12 @@ import Form from '../components/Form/Form';
 
 <Layout title="Space4Ads - Monetize your empty real estate">
     <main>
-        <center><img src="/space4ads.jpg" width="250px"></center>
-        <h1>Space4Ads</h1>
-        <h2>Turn Empty Storefronts Into <span class="text-gradient">High-Impact Advertising Spaces</span></h2>
-        <p>Are you looking for a creative way to showcase your brand? Transform vacant storefronts into eye-catching
-            advertising displays with our service! We rent out the windows of unoccupied retail spaces, providing a
-            unique opportunity to capture the attention of pedestrians, drivers, and local communities.</p>
+        <center><img src="/Space4Ads.png" width="250px"></center>
+        <p>We Turn Window Space Into Ads</p>
 
-        <h2>Why Choose Our Storefront Advertising?</h2>
-        <ul class="points">
-            <li>
-                <span class="text-gradient"><b>Prime Locations:</b></span> Our network of available storefronts covers key areas, ensuring your ads are
-                seen in high-traffic locations.
-            </li>
-            <li>
-                <span class="text-gradient"><b>Cost-Effective:</b></span> Utilize premium ad spaces without the commitment of traditional retail leasing
-                costs.
-            </li>
-            <li>
-                <span class="text-gradient"><b>Visibility & Engagement:</b></span> Get noticed by thousands daily in vibrant community spaces where your
-                audience lives, works, and shops.
-            </li>
-            <li>
-                <span class="text-gradient"><b>Flexible Terms:</b></span> Whether short-term campaigns or extended placements, we cater to your needs.
-            </li>
-        </ul>
+        <p>Revenues for Vacant Spaces</p>
 
-        <h2>Ready to Make an Impression?</h2>
-
-        <span>
-			Elevate your brand and engage with your local audience. Contact us today to discover available storefronts and start making an impact!
-		</span>
-		<br><br>
+        <p>Street-Level Ads for Brands</p>
         <Form client:only="react" />
     </main>
 </Layout>
@@ -48,69 +22,9 @@ import Form from '../components/Form/Form';
         padding: 1rem;
         width: 800px;
         max-width: calc(100% - 2rem);
-        color: white;
         font-size: 20px;
         line-height: 1.6;
-    }
-
-    .astro-a {
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        transform: translatex(-50%);
-        width: 220px;
-        height: auto;
-        z-index: -1;
-    }
-
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1;
         text-align: center;
-        margin-bottom: 1em;
-    }
-
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-
-    .instructions {
-        margin-bottom: 2rem;
-        border: 1px solid rgba(var(--accent-light), 25%);
-        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
-
-    .instructions code {
-        font-size: 0.8em;
-        font-weight: bold;
-        background: rgba(var(--accent-light), 12%);
-        color: rgb(var(--accent-light));
-        border-radius: 4px;
-        padding: 0.3em 0.4em;
-    }
-
-    .instructions strong {
-        color: rgb(var(--accent-light));
-    }
-
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 2rem;
-        padding: 0;
-    }
-
-    ul.points {
-        padding-left: 0px;
-    }
-    .points li {
-        padding-top: 15px;
+        font-family: "Open Sans", sans-serif;;
     }
 </style>
