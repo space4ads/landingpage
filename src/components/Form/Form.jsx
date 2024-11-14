@@ -62,24 +62,23 @@ const isDisabled = useMemo(() => {
 			<form className={styles['my-form']}>
 				<div className={styles.container}>
 					<ul>
-						<li>
-							<div className={styles.grid}>
+						<li className={styles.grid}>
+
 								<input
 									onChange={(e) => onFormChange('Name', e.target.value)}
 									type="text" name="Name" placeholder="Name" required/>
-							</div>
+
 						</li>
-						<li>
-							<div className={styles.grid}>
+						<li className={styles.grid}>
 								<input
 									onChange={(e) => onFormChange('Email', e.target.value)}
 									type="email" name="Email" placeholder="Email" required/>
-							</div>
+
 						</li>
 						<li>
-							<div className={`${styles.grid} ${styles['grid-2']}`}>
+							<div className={styles.grid}>
 								<button onClick={submit} disabled={isDisabled}>
-									<span className={styles["btn-conversion"]}>Submit</span>
+									Submit
 								</button>
 							</div>
 						</li>

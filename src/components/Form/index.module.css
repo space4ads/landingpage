@@ -36,7 +36,7 @@ textarea {
 
 ul {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 
@@ -53,6 +53,9 @@ ul {
     margin-bottom: 1.5rem;
 }
 
+.grid {
+    display: flex;
+}
 .my-form li,
 .my-form .grid > *:not(:last-child) {
     margin-bottom: 1.5rem;
@@ -70,7 +73,10 @@ ul {
     transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
     transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
-
+.my-form button {
+    width: 200px;
+    margin: 0 auto;
+}
 .my-form textarea {
     height: 170px;
 }
@@ -84,8 +90,7 @@ ul {
 .my-form input:focus,
 .my-form textarea:focus,
 .my-form button:enabled:hover,
-.my-form button:focus,
-.my-form input[type="checkbox"]:focus + label {
+.my-form button:focus {
     background: var(--bgFormElsFocus);
 }
 
@@ -115,88 +120,6 @@ ul {
 }
 
 
-/* FORM BTNS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.my-form .required-msg {
-    display: none;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
-    no-repeat center left / 15px 15px;
-    padding-left: 20px;
-}
-
-.my-form .btn-grid {
-    position: relative;
-    overflow: hidden;
-    transition: filter 0.2s;
-}
-
-.my-form button {
-    font-weight: bold;
-}
-
-.my-form button > * {
-    display: inline-block;
-    width: 100%;
-    transition: transform 0.4s ease-in-out;
-}
-
-.my-form button .back {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-110%, -50%);
-}
-
-.my-form button:enabled:hover .back,
-.my-form button:focus .back {
-    transform: translate(-50%, -50%);
-}
-
-.my-form button:enabled:hover .front,
-.my-form button:focus .front {
-    transform: translateX(110%);
-}
-
-
-/* CUSTOM CHECKBOX
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.my-form input[type="checkbox"] {
-    position: absolute;
-    left: -9999px;
-}
-
-.my-form input[type="checkbox"] + label {
-    position: relative;
-    display: inline-block;
-    padding-left: 2rem;
-    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-
-.my-form input[type="checkbox"] + label::before,
-.my-form input[type="checkbox"] + label::after {
-    content: '';
-    position: absolute;
-}
-
-.my-form input[type="checkbox"] + label::before {
-    left: 0;
-    top: 6px;
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--white);
-}
-
-.my-form input[type="checkbox"]:checked + label::after {
-    left: 7px;
-    top: 7px;
-    width: 6px;
-    height: 14px;
-    border-bottom: 2px solid var(--white);
-    border-right: 2px solid var(--white);
-    transform: rotate(45deg);
-}
-
-
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
@@ -209,44 +132,11 @@ footer a {
     text-decoration: none;
 }
 
-
-
 /* MQ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (min-width: 600px) {
-    .my-form .grid {
-        display: grid;
-        grid-gap: 1.5rem;
-    }
 
-    .my-form .grid-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .my-form .grid-3 {
-        grid-template-columns: auto auto auto;
-        align-items: center;
-    }
-
-    .my-form .grid > *:not(:last-child) {
-        margin-bottom: 0;
-    }
-
-    .my-form .required-msg {
-        display: block;
-    }
+@media screen and (max-width: 400px) {
     .my-form button {
-        margin-left: 10px;
-    }
-}
-
-@media screen and (min-width: 541px) {
-    .my-form input[type="checkbox"] + label::before {
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .my-form input[type="checkbox"]:checked + label::after {
-        top: 3px;
+        width: 100%;
     }
 }
