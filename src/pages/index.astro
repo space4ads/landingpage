@@ -5,16 +5,20 @@ import Form from '../components/Form/Form';
 
 <Layout title="Space4Ads - Turn Empty Space Into Ads">
     <main>
-        <center><img src="/Space4Ads.png" width="250px"></center>
+        <center><img src="/Space4Ads_250.avif"
+                     srcset="/Space4Ads.avif 4x"
+                     width="250px" alt="space4ads logo"></center>
         <p>Turn Empty Space Into Ads</p>
 
         <p>Revenues for Vacant Spaces</p>
 
         <p>Street-Level Ads for Brands</p>
         <Form client:only="react" />
-        <p><a href="https://www.instagram.com/space4ads_app"><img src="/icons8-instagram-240.png" width="48px" /></a>&nbsp
-        <a href="https://www.linkedin.com/company/space4ads"><img src="/icons8-linkedin-240.png" width="48px" /></a></p>
-        <span style="font-size: smaller">©️2024 Space4Ads - <a href="mailto:try.space4ads@gmail.com">try.space4ads@gmail.com</a></span>
+        <p><a href="https://www.instagram.com/space4ads_app" aria-label="Link to Instagram">
+            <img src="/icons8-instagram-240.png" width="48" alt="instagram logo" /></a>&nbsp
+        <a href="https://www.linkedin.com/company/space4ads" aria-label="Link to LinkedIn">
+            <img src="/icons8-linkedin-240.png" width="48" alt="linkedin logo" /></a></p>
+        <span style="font-size: smaller">©️2024 Space4Ads - <a href="mailto:try.space4ads@gmail.com" aria-label="Link to email">try.space4ads@gmail.com</a></span>
     </main>
 </Layout>
 
